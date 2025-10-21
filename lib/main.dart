@@ -17,16 +17,6 @@ class UiScreen extends StatelessWidget {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 class header extends StatelessWidget {
   const header({super.key});
 
@@ -44,15 +34,40 @@ class header extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Text(
-        "This is the body",
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 34,
-          color: Colors.blueAccent,
-        ),
-      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            const Text(
+              "This is the body",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 34,
+                color: Colors.blueAccent,
+              ),
+            ),
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'Enter your name',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 16),
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'Enter your age',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('Submit'),
+            ),
+          ],
+        )
 
+      ),
     );
   }
 }
