@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const UiScreen());
 }
@@ -10,39 +9,20 @@ class UiScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Header(),
-    );
-  }
-}
-
-class Header extends StatelessWidget {
-  const Header({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Image.asset(
-              'assets/fb_img.png', // path to your image
-              width: 100,
-              height: 100,
+      title: 'Flutter Demo',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'Flutter New',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 34,
+              color: Colors.red,
             ),
-            const SizedBox(width: 20),
-            const Text(
-              "This is child",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue,
-              ),
-            ),
-          ],
+          ),
+          centerTitle: true,
         ),
       ),
     );
