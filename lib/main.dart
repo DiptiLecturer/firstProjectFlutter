@@ -12,19 +12,48 @@ class UiScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Flutter New',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 34,
-              color: Colors.red,
-            ),
-          ),
-          centerTitle: true,
-        ),
-      ),
+      home: header(),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+class header extends StatelessWidget {
+  const header({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Flutter New',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 34,
+            color: Colors.red,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: Text(
+        "This is the body",
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 34,
+          color: Colors.blueAccent,
+        ),
+      ),
+
+    );
+  }
+}
+
